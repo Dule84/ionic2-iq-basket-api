@@ -1,17 +1,17 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <img src="http://iq-basketball.com/public/assets/images/f_logo.png">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <ion-list>
+    <ion-item *ngFor="let tip of tips">
+      <ion-thumbnail item-start>
+        <img src="http://iq-basketball.com/public/assets/images/league/2a.png">
+      </ion-thumbnail>
+      <h2>{{tip.opponents}} - {{tip.guest}}</h2>
+      <p>{{tip.date}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>
